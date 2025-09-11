@@ -1,0 +1,95 @@
+---
+title: "Visualization Tools"
+format:
+  revealjs:
+    theme: serif
+jupyter: python3
+---
+
+# Graphviz
+
+---
+
+## Me
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+Jonathan Llovet
+
+- Software Engineer, Linguist, Philosopher
+- BA from St. John's College, studied Philosophy and History of Math and Science
+- Enrolled in MS in CS at Towson University
+- Solutions Architect and Cybersecurity Manager
+
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/36782355?v=4)
+
+[jllovet.com](jllovet.com)
+
+:::
+
+::::
+
+
+
+
+
+
+
+---
+
+## Hello, Graphviz!
+:::: {.columns}
+
+::: {.column width="40%"}
+```dot
+digraph g {
+  a -> b
+}
+```
+:::
+
+::: {.column width="60%"}
+```{dot}
+//| fig-width: 4
+digraph g {
+  a -> b
+}
+```
+:::
+
+::::
+
+---
+
+## Direction
+:::: {.columns}
+
+::: {.column width="40%"}
+```dot
+digraph g {
+    rankdir=LR
+    a -> b
+}
+```
+:::
+
+::: {.column width="60%"}
+```{dot}
+//| fig-width: 4
+digraph g {
+    rankdir=LR
+    a -> b
+}
+```
+:::
+
+::::
+
+
+
+
