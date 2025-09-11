@@ -4,6 +4,7 @@ format:
   revealjs:
     theme: serif
 jupyter: python3
+self-contained: true
 ---
 
 # Graphviz
