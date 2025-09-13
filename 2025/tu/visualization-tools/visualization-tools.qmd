@@ -1,5 +1,5 @@
 ---
-title: "Visualization Tools"
+title: "Visualization in Software"
 format:
   revealjs:
     theme: serif
@@ -7,22 +7,43 @@ jupyter: python3
 self-contained: true
 ---
 
-# Graphviz
+# Prelude
 
 ---
 
-## Me
+## Jonathan Llovet
 
 :::: {.columns}
 
 ::: {.column width="80%"}
 
-Jonathan Llovet
-
 - Software Engineer, Linguist, Philosopher
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/36782355?v=4)
+
+[jllovet.com](jllovet.com)
+
+:::
+
+::::
+
+---
+
+## Jonathan Llovet
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+School
+
 - BA from St. John's College, studied Philosophy and History of Math and Science
 - Enrolled in MS in CS at Towson University
-- Solutions Architect and Cybersecurity Manager
+- Summer Language School in Hebrew at Middlebury University
+- Coursework at Indiana Univ. East in Math
+- Other language programs - classical and modern
 
 :::
 
@@ -34,6 +55,127 @@ Jonathan Llovet
 :::
 
 ::::
+---
+
+## Jonathan Llovet
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+Work
+
+- Solutions Architect and Cybersecurity Manager at *Inspire Brands*
+- Founder and CEO of *Opening Questions*, where I'm building a language learning app for Ancient Greek called *Talk with Albert*
+- Formerly worked as a consultant in Identity and Access Management
+- Writing a book on Philosophy of Computer Science: *Algorithmics - The Being of Becoming*
+
+:::
+
+::: {.column width="20%"}
+![](https://avatars.githubusercontent.com/u/36782355?v=4)
+
+[jllovet.com](jllovet.com)
+
+:::
+
+::::
+
+---
+
+# Computation, Software, and Discourse
+
+---
+
+# What is Computation?
+
+---
+
+## Application of Algorithmics
+
+::: {.fragment }
+- Study of change and becoming, sister of calculus
+:::
+
+::: {.fragment }
+- Transformation of initial state to a subsequent state
+:::
+
+::: {.fragment }
+- Sometimes with side effects
+:::
+
+---
+
+## Modeling and Analogy
+::: {.fragment }
+- Exploration (Questions & Discussions)
+:::
+::: {.fragment }
+- Instrumentalization (Means to an End)
+:::
+::: {.fragment }
+- Commodification (Product)
+:::
+
+---
+
+At their core:
+
+::: {.fragment }
+- Communication and Collaboration
+:::
+
+We should be concerned with:
+
+::: {.fragment }
+- Rhetoric
+- Effective Presentation
+:::
+
+---
+
+## Our Audiences
+
+::: {.fragment }
+- The Computer
+:::
+::: {.fragment }
+- Other Software Engineers
+:::
+::: {.fragment }
+- Colleagues
+:::
+::: {.fragment }
+- Customers
+:::
+::: {.fragment }
+- Ourselves
+:::
+
+
+---
+
+## Effective Communication
+
+::: {.fragment }
+- Fundamental aspects of our cognition:
+  - Space and Time
+:::
+
+::: {.fragment }
+- Frame communication around these
+
+  ::: {.fragment }
+  - Allow audience to explore concepts spatially
+  :::
+  ::: {.fragment }
+  - Tell a story
+  :::
+:::
+
+
+# Enter, Graphviz
 
 ---
 
@@ -85,6 +227,21 @@ digraph g {
 
 ::::
 
+---
 
+### A Reprise on Rhetoric and Storytelling
 
+::: {.fragment }
+- Use analogies from reading
+- Weak form of Sapir Whorf
+- Majority of world languages
+  - (notable exceptions: Hebrew, Arabic)
+::: 
 
+Structure Narrative
+
+::: {.fragment }
+- Left-to-Right
+- Top-to-Bottom
+- Clockwise
+:::
