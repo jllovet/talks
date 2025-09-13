@@ -81,11 +81,7 @@ Work
 
 ::::
 
----
-
-# Computation, Software, and Discourse
-
----
+# Why Talk About Visualization?
 
 # What is Computation?
 
