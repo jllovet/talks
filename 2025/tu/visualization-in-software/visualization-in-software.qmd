@@ -325,13 +325,40 @@ Structure Narrative
   - Go
   - Javascript
 
-## Integration with Other Tools
+## Uses and Integration with Tools
 
-- Read from DB
+- Read from DB to Dynamically Generate Graphs
 - Integrate into documentation
 - Real-time collaboration
+
+Add to
+
 - READMEs
-- Obsidian
+- Plain-Text Knowledge Management Systems
+
+---
+
+## Obsidian
+
+- Knowledge management system built-around plain-text
+- Uses text processing of markdown files
+- [https://obsidian.md/](https://obsidian.md/)
+
+---
+
+![Obsidian Inline Graphviz](obsidian-inline-graphviz.png)
+
+---
+
+![Obsidian Community Plugins - Graphviz](obsidian-community-plugins-graphviz.png)
+
+---
+
+![Obsidian Graph View](obsidian-graph-view.png)
+
+---
+
+![Obsidian Graph View - Filtered to Tag](obsidian-graph-view-filtered-to-tag.png)
 
 # Other Visualizations
 
@@ -349,3 +376,7 @@ Structure Narrative
 
 ## Example: Sequence Diagrams
 - Sequence diagrams
+
+---
+
+![Obsidian Inline Mermaid](obsidian-inline-mermaid.png)
