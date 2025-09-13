@@ -1329,9 +1329,52 @@ margin-right: 0; }
 <ul>
 <li>Easy modification and iteration</li>
 <li>Effective for collaboration</li>
-<li>VSCode Plugin for live updates</li>
+<li><a href="https://github.com/joaompinto/vscode-graphviz">VSCode Plugin</a> for live updates</li>
 </ul>
 </div></div>
+</section>
+<section id="graphviz-resources" class="slide level2">
+<h2>Graphviz Resources</h2>
+<ul>
+<li><a href="https://graphviz.org/download/">Graphviz: graphviz.org/download</a></li>
+<li><a href="https://github.com/joaompinto/vscode-graphviz">VSCode: github.com/joaompinto/vscode-graphviz</a></li>
+<li><a href="https://graphviz.org/">Docs: graphviz.org</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz">Gitlab: gitlab.com/graphviz/graphviz</a></li>
+</ul>
+</section>
+<section id="basic-usage" class="slide level2">
+<h2>Basic Usage</h2>
+<p><code>mygraph.dot</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource dot number-lines code-with-copy"><code class="sourceCode dot"><span id="cb3-1"><a href></a><span class="kw">digraph</span> <span class="va">g</span> <span class="ot">{</span></span>
+<span id="cb3-2"><a href></a><span class="co">  </span><span class="va">a</span><span class="co"> </span><span class="ot">-&gt;</span><span class="co"> </span><span class="va">b</span></span>
+<span id="cb3-3"><a href></a><span class="ot">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Generate a PNG</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href></a>dot -Tpng mygraph.dot -o mygraph.png</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Scale the PNG</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href></a>dot -Tpng mygraph.dot -s=10 -o mygraph.png</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Export to SVG</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href></a>dot -Tsvg mygraph.dot -o mygraph.svg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Nodes</li>
+<li>Edges</li>
+<li>Subgraphs</li>
+<li>Styling</li>
+<li>Challenge with styling analogous to css</li>
+<li>Possible Solutions</li>
+<li>Preprocessors</li>
+<li>IDE Snippets</li>
+<li>Wrappers in other languages</li>
+<li>Python</li>
+<li>Go</li>
+<li>Javascript</li>
+<li>Integration with other tools as part of a pipeline</li>
+<li>Read from DB</li>
+<li>Integrate into documentation</li>
+<li>Real-time collaboration</li>
+</ul>
 </section>
 <section class="slide level2">
 

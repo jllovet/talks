@@ -230,10 +230,64 @@ digraph g {
 ::: {.column width="60%"}
 - Easy modification and iteration
 - Effective for collaboration
-- VSCode Plugin for live updates
+- [VSCode Plugin](https://github.com/joaompinto/vscode-graphviz) for live updates
 :::
 
 ::::
+
+---
+
+## Graphviz Resources
+
+- [Graphviz: graphviz.org/download](https://graphviz.org/download/)
+- [VSCode: github.com/joaompinto/vscode-graphviz](https://github.com/joaompinto/vscode-graphviz)
+- [Docs: graphviz.org](https://graphviz.org/)
+- [Gitlab: gitlab.com/graphviz/graphviz](https://gitlab.com/graphviz/graphviz)
+
+---
+
+## Basic Usage
+
+`mygraph.dot`
+```dot
+digraph g {
+  a -> b
+}
+```
+
+Generate a PNG
+```shell
+dot -Tpng mygraph.dot -o mygraph.png
+```
+
+Scale the PNG
+```shell
+dot -Tpng mygraph.dot -s=10 -o mygraph.png
+```
+
+Export to SVG
+```shell
+dot -Tsvg mygraph.dot -o mygraph.svg
+```
+
+---
+
+- Nodes
+- Edges
+- Subgraphs
+- Styling
+- Challenge with styling analogous to css
+- Possible Solutions
+- Preprocessors
+- IDE Snippets
+- Wrappers in other languages
+- Python
+- Go
+- Javascript
+- Integration with other tools as part of a pipeline
+- Read from DB
+- Integrate into documentation
+- Real-time collaboration
 
 ---
 
