@@ -342,7 +342,7 @@ Structure Narrative
 ## Hello, Mermaid
 
 - Other visualization tasks
-- More frequent support in Markdown tools
+- Frequent native support in Markdown tools
 - Different rendering style, implications for complicated graphs
 
 ---
