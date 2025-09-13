@@ -35,12 +35,6 @@ Jonathan Llovet
 
 ::::
 
-
-
-
-
-
-
 ---
 
 ## Hello, Graphviz!
