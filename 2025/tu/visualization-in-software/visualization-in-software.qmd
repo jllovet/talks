@@ -330,6 +330,8 @@ Structure Narrative
 - Read from DB
 - Integrate into documentation
 - Real-time collaboration
+- READMEs
+- Obsidian
 
 # Other Visualizations
 
