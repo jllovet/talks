@@ -188,10 +188,8 @@ digraph g {
   a -> b
 }
 ```
-:::
-
-::: {.column width="60%"}
 ```{dot}
+//| fig-height: 4
 //| fig-width: 4
 digraph g {
   a -> b
@@ -199,30 +197,40 @@ digraph g {
 ```
 :::
 
+::: {.column width="60%"}
+- Declarative graph-generation
+- Plain text files ending in .dot
+- Processed by CLI or another tool
+:::
+
 ::::
 
 ---
 
-## Direction
+## Hello, Graphviz!
 :::: {.columns}
 
 ::: {.column width="40%"}
 ```dot
 digraph g {
-    rankdir=LR
-    a -> b
+  rankdir=LR
+  a -> b
+}
+```
+```{dot}
+//| fig-height: 4
+//| fig-width: 4
+digraph g {
+  rankdir=LR
+  a -> b
 }
 ```
 :::
 
 ::: {.column width="60%"}
-```{dot}
-//| fig-width: 4
-digraph g {
-    rankdir=LR
-    a -> b
-}
-```
+- Easy modification and iteration
+- Effective for collaboration
+- VSCode Plugin for live updates
 :::
 
 ::::
