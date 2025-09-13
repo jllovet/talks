@@ -268,22 +268,15 @@ dot -Tsvg mygraph.dot -o mygraph.svg
 
 ---
 
-- Nodes
-- Edges
-- Subgraphs
-- Styling
-- Challenge with styling analogous to css
-- Possible Solutions
-- Preprocessors
-- IDE Snippets
-- Wrappers in other languages
-- Python
-- Go
-- Javascript
-- Integration with other tools as part of a pipeline
-- Read from DB
-- Integrate into documentation
-- Real-time collaboration
+## Nodes
+
+---
+
+## Edges
+
+---
+
+## Subgraphs
 
 ---
 
@@ -303,3 +296,37 @@ Structure Narrative
 - Top-to-Bottom
 - Clockwise
 :::
+
+---
+
+## Styling
+
+---
+
+## Challenges Presented by Styling
+
+- Analogous to CSS
+- No built-in variable support
+
+---
+
+## Possible Solutions
+
+- Possible Solutions
+- Preprocessors
+- IDE Snippets
+
+---
+
+### More Robust Solutions
+
+- Wrappers in other languages
+  - Python
+  - Go
+  - Javascript
+
+## Integration with Other Tools
+
+- Read from DB
+- Integrate into documentation
+- Real-time collaboration
