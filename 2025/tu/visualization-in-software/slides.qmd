@@ -1289,7 +1289,7 @@ erDiagram
 
 - See: [Crow's Foot Notation](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation)
 
----
+# Links
 
 :::: {.columns}
 
