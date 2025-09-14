@@ -270,13 +270,130 @@ dot -Tsvg mygraph.dot -o mygraph.svg
 
 ## Nodes
 
+:::: {.columns}
+
+::: {.column width="70%"}
+```dot
+digraph g {
+  rankdir=LR
+  // default label is variable name
+  seed // default shape is ellipse
+  flower [label="Rose"]
+  acorn [label="Acorn" shape="square"]
+  tree [label="Tree" shape="rectangle"]
+  forest [label="Forest" shape="circle"]
+}
+```
+::: 
+
+::: {.column width="30%"}
+```{dot}
+//| fig-width: 3
+digraph g {
+  rankdir=LR
+  seed
+  flower [label="Rose"]
+  acorn [label="Acorn" shape="square"]
+  tree [label="Tree" shape="rectangle"]
+  forest [label="Forest" shape="circle"]
+}
+```
+
+:::
+
+::::
+
 ---
 
 ## Edges
 
+:::: {.columns}
+
+::: {.column width="70%"}
+```dot
+digraph g {
+  client [label="client"]
+  load_balancer [label="load\nbalancer"]
+  server [label="server"]
+  db [shape="cylinder" label="db"]
+  files [shape="folder" label="file\nbucket"]
+
+  client -> load_balancer [label="request"]
+  load_balancer -> server [label="route"]
+  server -> {
+    files
+    db
+  } [label="request"]
+}
+```
+:::
+
+::: {.column width="30%"}
+```{dot}
+//| fig-width: 3
+digraph g {
+  client [label="client"]
+  load_balancer [label="load\nbalancer"]
+  server [label="server"]
+  db [shape="cylinder" label="db"]
+  files [shape="folder" label="file\nbucket"]
+
+  client -> load_balancer [label="request"]
+  load_balancer -> server [label="route"]
+  server -> {
+    files
+    db
+  } [label="request"]
+}
+```
+:::
+
+::::
+
 ---
 
 ## Subgraphs
+
+:::: {.columns}
+
+::: {.column width="70%"}
+```dot
+digraph g {
+  rankdir=LR
+  subgraph cluster_unary_functions {
+    label="Unary Functions"
+    negation [label="Negation"]
+    identity [label="Identity"]
+  }
+  subgraph cluster_binary_functions {
+    label="Binary Functions"
+    and [label="And"]
+    or [label="Or"]
+  }
+}
+```
+::: 
+
+::: {.column width="30%"}
+```{dot}
+//| fig-width: 3
+digraph g {
+  rankdir=LR
+  subgraph cluster_unary_functions {
+    label="Unary Functions"
+    negation [label="Negation"]
+    identity [label="Identity"]
+  }
+  subgraph cluster_binary_functions {
+    label="Binary Functions"
+    and [label="And"]
+    or [label="Or"]
+  }
+}
+```
+:::
+
+::::
 
 ---
 
