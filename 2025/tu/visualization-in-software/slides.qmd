@@ -877,8 +877,8 @@ digraph G {
 
 ## Challenges Presented by Styling
 
-- Analogous to CSS
 - No built-in variable support
+- Analogous to CSS
 
 ---
 
