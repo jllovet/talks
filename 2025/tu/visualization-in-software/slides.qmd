@@ -420,6 +420,364 @@ Structure Narrative
 
 ---
 
+## Putting Things Together - Supply Chain Example
+
+```dot
+digraph G {
+    rankdir="LR"
+    ratio=auto
+    ranksep=auto
+
+    label="Sculpting Supply Store"
+    labelloc="t"
+
+    // Nodes
+    subgraph cluster_supply_chain {
+        label="Supply Chain"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_raw_materials {
+            label="Raw Materials"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            mine [label="Mine"]
+        }
+        subgraph cluster_clay_supply {
+            label="Clay"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_supplier [label="Clay\nSupplier"]
+        }
+        subgraph cluster_tool_supply {
+            label="Tools"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            tool_manufacturer [label="Tool\nManufacturer"]
+            tool_supplier [label="Tool\nSupplier"]
+
+            tool_manufacturer -> tool_supplier [label="Provides"]
+        }
+
+        mine -> tool_manufacturer [label="Provides"]
+    }
+    subgraph cluster_store {
+        label="Store"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_inventory {
+            label="Inventory"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_inventory [label="Clay\nInventory"]
+            tool_inventory [label="Tool\nInventory"]
+        }
+        subgraph cluster_staff {
+            label="Staff"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clerk [label="Clerk"]
+            general_manager [label="General\nManager"]
+            general_manager -> clerk [label="supports"]
+        }
+    }
+
+    // Edges
+    mine -> clay_supplier [label="Provides"]
+    clay_supplier -> clay_inventory [label="Restocks"]
+    tool_supplier -> tool_inventory [label="Restocks"]
+
+    clerk -> clay_inventory [label="Manages"]
+    clerk -> tool_inventory [label="Manages"]
+
+    general_manager -> clay_supplier [label="Coordinates\nwith"]
+    general_manager -> tool_supplier [label="Coordinates\nwith"]
+}
+```
+
+---
+
+```{dot}
+//| fig-height: 6
+digraph G {
+    rankdir="LR"
+    ratio=auto
+    ranksep=auto
+
+    label="Sculpting Supply Store"
+    labelloc="t"
+
+    // Nodes
+    subgraph cluster_supply_chain {
+        label="Supply Chain"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_raw_materials {
+            label="Raw Materials"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            mine [label="Mine"]
+        }
+        subgraph cluster_clay_supply {
+            label="Clay"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_supplier [label="Clay\nSupplier"]
+        }
+        subgraph cluster_tool_supply {
+            label="Tools"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            tool_manufacturer [label="Tool\nManufacturer"]
+            tool_supplier [label="Tool\nSupplier"]
+
+            tool_manufacturer -> tool_supplier [label="Provides"]
+        }
+
+        mine -> tool_manufacturer [label="Provides"]
+    }
+    subgraph cluster_store {
+        label="Store"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_inventory {
+            label="Inventory"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_inventory [label="Clay\nInventory"]
+            tool_inventory [label="Tool\nInventory"]
+        }
+        subgraph cluster_staff {
+            label="Staff"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clerk [label="Clerk"]
+            general_manager [label="General\nManager"]
+            general_manager -> clerk [label="supports"]
+        }
+    }
+
+    // Edges
+    mine -> clay_supplier [label="Provides"]
+    clay_supplier -> clay_inventory [label="Restocks"]
+    tool_supplier -> tool_inventory [label="Restocks"]
+
+    clerk -> clay_inventory [label="Manages"]
+    clerk -> tool_inventory [label="Manages"]
+
+    general_manager -> clay_supplier [label="Coordinates\nwith"]
+    general_manager -> tool_supplier [label="Coordinates\nwith"]
+}
+```
+
+---
+
+## Orientation Matters - Inverting the Graph
+
+```dot
+digraph G {
+    rankdir="BT"
+    ratio=1
+    ranksep=auto
+
+    label="Sculpting Supply Store"
+    labelloc="t"
+
+    // Nodes
+    subgraph cluster_supply_chain {
+        label="Supply Chain"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_raw_materials {
+            label="Raw Materials"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            mine [label="Mine"]
+        }
+        subgraph cluster_clay_supply {
+            label="Clay"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_supplier [label="Clay\nSupplier"]
+        }
+        subgraph cluster_tool_supply {
+            label="Tools"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            tool_manufacturer [label="Tool\nManufacturer"]
+            tool_supplier [label="Tool\nSupplier"]
+
+            tool_manufacturer -> tool_supplier [label="Provides"]
+        }
+
+        mine -> tool_manufacturer [label="Provides"]
+    }
+    subgraph cluster_store {
+        label="Store"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_inventory {
+            label="Inventory"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_inventory [label="Clay\nInventory"]
+            tool_inventory [label="Tool\nInventory"]
+        }
+        subgraph cluster_staff {
+            label="Staff"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clerk [label="Clerk"]
+            general_manager [label="General\nManager"]
+            general_manager -> clerk [label="supports"]
+        }
+    }
+
+    // Edges
+    mine -> clay_supplier [label="Provides"]
+    clay_supplier -> clay_inventory [label="Restocks"]
+    tool_supplier -> tool_inventory [label="Restocks"]
+
+    clerk -> clay_inventory [label="Manages"]
+    clerk -> tool_inventory [label="Manages"]
+
+    general_manager -> clay_supplier [label="Coordinates\nwith"]
+    general_manager -> tool_supplier [label="Coordinates\nwith"]
+}
+```
+
+---
+
+```{dot}
+//| fig-height: 6
+digraph G {
+    rankdir="BT"
+    ratio=1
+    ranksep=auto
+
+    label="Sculpting Supply Store"
+    labelloc="t"
+
+    // Nodes
+    subgraph cluster_supply_chain {
+        label="Supply Chain"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_raw_materials {
+            label="Raw Materials"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            mine [label="Mine"]
+        }
+        subgraph cluster_clay_supply {
+            label="Clay"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_supplier [label="Clay\nSupplier"]
+        }
+        subgraph cluster_tool_supply {
+            label="Tools"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            tool_manufacturer [label="Tool\nManufacturer"]
+            tool_supplier [label="Tool\nSupplier"]
+
+            tool_manufacturer -> tool_supplier [label="Provides"]
+        }
+
+        mine -> tool_manufacturer [label="Provides"]
+    }
+    subgraph cluster_store {
+        label="Store"
+        style=rounded
+        style=filled
+        pencolor="#AEB6BE"
+        bgcolor="#E5F5FD"
+        subgraph cluster_inventory {
+            label="Inventory"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clay_inventory [label="Clay\nInventory"]
+            tool_inventory [label="Tool\nInventory"]
+        }
+        subgraph cluster_staff {
+            label="Staff"
+            style=rounded
+            style=filled
+            pencolor="#AEB6BE"
+            bgcolor="#EBF3E7"
+            clerk [label="Clerk"]
+            general_manager [label="General\nManager"]
+            general_manager -> clerk [label="supports"]
+        }
+    }
+
+    // Edges
+    mine -> clay_supplier [label="Provides"]
+    clay_supplier -> clay_inventory [label="Restocks"]
+    tool_supplier -> tool_inventory [label="Restocks"]
+
+    clerk -> clay_inventory [label="Manages"]
+    clerk -> tool_inventory [label="Manages"]
+
+    general_manager -> clay_supplier [label="Coordinates\nwith"]
+    general_manager -> tool_supplier [label="Coordinates\nwith"]
+}
+```
+
+---
+
 ## Challenges Presented by Styling
 
 - Analogous to CSS
