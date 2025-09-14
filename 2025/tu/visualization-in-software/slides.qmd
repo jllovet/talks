@@ -1012,14 +1012,20 @@ Add to
 
 ---
 
-## Go Callvis
+## Codebase Inspection
+
+### Go-Callvis
 
 - Using this: [github.com/ondrajz/go-callvis](github.com/ondrajz/go-callvis)
 - On this: [github.com/sikozonpc/ecom](https://github.com/sikozonpc/ecom)
 
+### Crabviz
+
+- Interactive Graphs: [github.com/chanhx/crabviz](https://github.com/chanhx/crabviz)
+
 ---
 
-## Go Callvis
+## Go Callvis - Codebase Inspection
 
 ```shell
 go-callvis -file ecom -graphviz cmd/main.go
@@ -1140,6 +1146,14 @@ fontname="Tahoma bold";
     "command-line-arguments.main" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at main.go:32: calling [fmt.Sprintf]" ]
 }
 ```
+
+
+---
+
+## Crabviz - Codebase Inspection
+
+![Crabviz - Codebase Inspection](https://raw.githubusercontent.com/chanhx/assets/a62015f1ee792dd57d756f106a9e48815f106ee3/crabviz/preview.gif)
+
 
 ---
 
