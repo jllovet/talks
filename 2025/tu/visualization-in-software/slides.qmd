@@ -431,19 +431,16 @@ digraph g {
 }
 ```
 
-See: [Wiktionary: Apricot](https://en.wiktionary.org/wiki/apricot)
+See: [Wiktionary - Apricot](https://en.wiktionary.org/wiki/apricot)
 
 ---
 
-:::: {.columns}
-
-::: {.column width="50%"}
+## The History of the Apricot
 
 ```{dot}
-//| fig-width: 3
 //| fig-height: 6
 digraph g {
-    rankdir=TB
+    rankdir=LR
     node [colorscheme=pastel25]
     praecoquum [shape="rectangle" style=filled fillcolor="1" label="praecoquum\n------\nLate Latin\nearly-ripening apples"]
     praecocia [shape="rectangle" style=filled fillcolor="1" label="praecocia\n------\nLate Latin\nearly-ripening peaches"]
@@ -458,15 +455,14 @@ digraph g {
 }
 ```
 
-::: 
+---
 
-::: {.column width="50%"}
+## The History of the Apricot
 
 ```{dot}
-//| fig-width: 3
 //| fig-height: 6
 digraph g {
-    rankdir=TB
+    rankdir=LR
     node [colorscheme=pastel25]
     albarqūq [shape="rectangle" style=filled fillcolor="3" label="الْبَرْقُوق\nal-barqūq\n------\nArabic\nplums"]
     albercoc [shape="rectangle" style=filled fillcolor="4" label="albercoc\n------\nCatalan\napricot"]
@@ -489,15 +485,18 @@ digraph g {
 }
 ```
 
-:::
+---
 
-::::
+## The History of the Apricot
+
+![Apricot History Map](apricot-map.png)
 
 ---
 
 ### A Reprise on Rhetoric and Storytelling
 
 ::: {.fragment }
+- Visualizations should be appropriate to the subject
 - Use analogies from reading
 - Weak form of Sapir Whorf
 - Majority of world languages
@@ -693,7 +692,7 @@ digraph G {
 
 ---
 
-## Orientation Matters - Inverting the Graph
+## Orientation Matters
 
 ```dot
 digraph G {
@@ -869,6 +868,10 @@ digraph G {
     general_manager -> tool_supplier [label="Coordinates\nwith"]
 }
 ```
+
+
+- Inappropriate orientation and aspect ratio
+- Conspicuous when they are wrong
 
 ---
 
