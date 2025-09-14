@@ -1191,14 +1191,100 @@ fontname="Tahoma bold";
 - Frequent native support in Markdown tools
 - Different rendering style, implications for complicated graphs
 
+- [mermaid.js.org](https://mermaid.js.org/intro/)
+
 ---
 
 ## Example: Sequence Diagrams
-- Sequence diagrams
+
+```mermaid
+sequenceDiagram
+autonumber
+Alice->>John: Hello John, how are you?
+loop HealthCheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+```
+
+Source: [mermaid.js.org](https://mermaid.js.org/syntax/sequenceDiagram.html#sequencenumbers)
+
+---
+
+## Example: Sequence Diagrams
+
+```{mermaid}
+sequenceDiagram
+autonumber
+Alice->>John: Hello John, how are you?
+loop HealthCheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+```
 
 ---
 
 ![Obsidian Inline Mermaid](obsidian-inline-mermaid.png)
+
+---
+
+## Example: Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    direction LR
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
+    }
+    ORDER ||--|{ LINE-ITEM : contains
+    ORDER {
+        int orderNumber
+        string deliveryAddress
+    }
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
+    }
+```
+
+
+---
+
+## Example: Entity Relationship Diagram
+
+```{mermaid}
+erDiagram
+    direction LR
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
+    }
+    ORDER ||--|{ LINE-ITEM : contains
+    ORDER {
+        int orderNumber
+        string deliveryAddress
+    }
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
+    }
+```
+
+- See: [Crow's Foot Notation](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation)
 
 ---
 
