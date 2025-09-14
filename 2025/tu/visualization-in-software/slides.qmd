@@ -946,11 +946,17 @@ Source: [React Native Docs - Stylesheet](https://reactnative.dev/docs/stylesheet
 
 ---
 
-## Possible Solutions
+## Lightweight Solutions
+
+- IDE Snippets
+- Preprocessors
+
+---
 
 ### IDE Snippets
 
-- [VSCode User Defined Snippets](https://code.visualstudio.com/docs/editing/userdefinedsnippets)
+- VSCode User Defined Snippets
+  - [code.visualstudio.com](https://code.visualstudio.com/docs/editing/userdefinedsnippets)
 
 ---
 
@@ -977,25 +983,163 @@ Source: [React Native Docs - Stylesheet](https://reactnative.dev/docs/stylesheet
   - Perl
   - Python
 
+- Script would do text parsing and replacement
+
 ---
 
-### More Robust Solutions
-
-- Wrappers in other languages
+### More Robust Solution - Wrap in a Language
   - Python
+    - [diagrams.mingrammer.com](https://diagrams.mingrammer.com/)
+    - [github.com/xflr6/graphviz](https://github.com/xflr6/graphviz)
   - Go
+    - [github.com/goccy/go-graphviz](https://github.com/goccy/go-graphviz)
+    - [github.com/marqeta/go-dfd/](https://github.com/marqeta/go-dfd/)
   - Javascript
+    - [github.com/mdaines/viz-js](https://github.com/mdaines/viz-js)
 
 ## Uses and Integration with Tools
 
 - Read from DB to Dynamically Generate Graphs
 - Integrate into documentation
 - Real-time collaboration
+- Other programmatic manipulation
+  - [networkx](https://github.com/networkx/networkx)
 
 Add to
 
 - READMEs
 - Plain-Text Knowledge Management Systems
+
+---
+
+## Go Callvis
+
+- Using this: [github.com/ondrajz/go-callvis](github.com/ondrajz/go-callvis)
+- On this: [github.com/sikozonpc/ecom](https://github.com/sikozonpc/ecom)
+
+---
+
+## Go Callvis
+
+```shell
+go-callvis -file ecom -graphviz cmd/main.go
+```
+```{dot}
+digraph gocallvis {
+    label="";
+    labeljust="l";
+    fontname="Arial";
+    fontsize="14";
+    rankdir="LR";
+    bgcolor="lightgray";
+    style="solid";
+    penwidth="0.5";
+    pad="0.0";
+    nodesep="0.35";
+
+    node [shape="box" style="filled,rounded" fillcolor="honeydew" fontname="Verdana" penwidth="1.0" margin="0.16,0.0"];
+    edge [minlen="2"]
+
+    subgraph "cluster_focus" {
+        bgcolor="#e6ecfa";
+label="main";
+labelloc="t";
+labeljust="c";
+fontsize="18";
+        
+        "command-line-arguments.initStorage" [ fillcolor="lightblue" label="initStorage" penwidth="0.5" tooltip="command-line-arguments.initStorage | defined in main.go:38\nat main.go:41: calling [log.Fatal]\nat main.go:39: calling [(*database/sql.DB).Ping]\nat main.go:44: calling [log.Println]" ]
+        "command-line-arguments.main" [ fillcolor="lightblue" label="main" penwidth="0.5" tooltip="command-line-arguments.main | defined in main.go:14\nat main.go:30: calling [command-line-arguments.initStorage]\nat main.go:32: calling [github.com/sikozonpc/ecom/cmd/api.NewAPIServer]\nat main.go:25: calling [github.com/sikozonpc/ecom/db.NewMySQLStorage]\nat main.go:27: calling [log.Fatal]\nat main.go:34: calling [log.Fatal]\nat main.go:33: calling [(*github.com/sikozonpc/ecom/cmd/api.APIServer).Run]\nat main.go:32: calling [fmt.Sprintf]" ]
+        
+        subgraph "cluster_database/sql" {
+        style="filled";
+rank="sink";
+URL="/?f=database/sql";
+tooltip="package: database/sql";
+penwidth="0.8";
+fontsize="16";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+label="database/sql";
+        
+        "(*database/sql.DB).Ping" [ fillcolor="#adedad" label="(*DB).Ping" penwidth="1.5" tooltip="(*database/sql.DB).Ping | defined in sql.go:916" ]
+        
+    }
+
+        subgraph "cluster_fmt" {
+        URL="/?f=fmt";
+penwidth="0.8";
+fontsize="16";
+rank="sink";
+label="fmt";
+style="filled";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+tooltip="package: fmt";
+        
+        "fmt.Sprintf" [ fillcolor="#adedad" label="Sprintf" penwidth="1.5" tooltip="fmt.Sprintf | defined in print.go:237" ]
+        
+    }
+
+        subgraph "cluster_github.com/sikozonpc/ecom/cmd/api" {
+        URL="/?f=github.com/sikozonpc/ecom/cmd/api";
+penwidth="0.8";
+fontsize="16";
+style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+rank="sink";
+label="api";
+tooltip="package: github.com/sikozonpc/ecom/cmd/api";
+        
+        "github.com/sikozonpc/ecom/cmd/api.NewAPIServer" [ fillcolor="moccasin" label="NewAPIServer" penwidth="1.5" tooltip="github.com/sikozonpc/ecom/cmd/api.NewAPIServer | defined in api.go:20" ]
+        "(*github.com/sikozonpc/ecom/cmd/api.APIServer).Run" [ fillcolor="moccasin" label="(*APIServer).Run" penwidth="1.5" tooltip="(*github.com/sikozonpc/ecom/cmd/api.APIServer).Run | defined in api.go:27" ]
+        
+    }
+
+        subgraph "cluster_github.com/sikozonpc/ecom/db" {
+        fontsize="16";
+rank="sink";
+URL="/?f=github.com/sikozonpc/ecom/db";
+tooltip="package: github.com/sikozonpc/ecom/db";
+penwidth="0.8";
+style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+label="db";
+        
+        "github.com/sikozonpc/ecom/db.NewMySQLStorage" [ tooltip="github.com/sikozonpc/ecom/db.NewMySQLStorage | defined in db.go:10" fillcolor="moccasin" label="NewMySQLStorage" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_log" {
+        fillcolor="#E0FFE1";
+label="log";
+tooltip="package: log";
+penwidth="0.8";
+style="filled";
+rank="sink";
+URL="/?f=log";
+fontsize="16";
+fontname="Tahoma bold";
+        
+        "log.Fatal" [ penwidth="1.5" tooltip="log.Fatal | defined in log.go:422" fillcolor="#adedad" label="Fatal" ]
+        "log.Println" [ tooltip="log.Println | defined in log.go:415" fillcolor="#adedad" label="Println" penwidth="1.5" ]
+        
+    }
+
+    }
+
+    "command-line-arguments.main" -> "command-line-arguments.initStorage" [ tooltip="at main.go:30: calling [command-line-arguments.initStorage]" ]
+    "command-line-arguments.main" -> "github.com/sikozonpc/ecom/cmd/api.NewAPIServer" [ color="saddlebrown" tooltip="at main.go:32: calling [github.com/sikozonpc/ecom/cmd/api.NewAPIServer]" ]
+    "command-line-arguments.initStorage" -> "log.Fatal" [ color="saddlebrown" tooltip="at main.go:41: calling [log.Fatal]" ]
+    "command-line-arguments.main" -> "github.com/sikozonpc/ecom/db.NewMySQLStorage" [ color="saddlebrown" tooltip="at main.go:25: calling [github.com/sikozonpc/ecom/db.NewMySQLStorage]" ]
+    "command-line-arguments.main" -> "log.Fatal" [ color="saddlebrown" tooltip="at main.go:27: calling [log.Fatal]\nat main.go:34: calling [log.Fatal]" ]
+    "command-line-arguments.main" -> "(*github.com/sikozonpc/ecom/cmd/api.APIServer).Run" [ color="saddlebrown" tooltip="at main.go:33: calling [(*github.com/sikozonpc/ecom/cmd/api.APIServer).Run]" ]
+    "command-line-arguments.initStorage" -> "(*database/sql.DB).Ping" [ color="saddlebrown" tooltip="at main.go:39: calling [(*database/sql.DB).Ping]" ]
+    "command-line-arguments.initStorage" -> "log.Println" [ color="saddlebrown" tooltip="at main.go:44: calling [log.Println]" ]
+    "command-line-arguments.main" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at main.go:32: calling [fmt.Sprintf]" ]
+}
+```
 
 ---
 
