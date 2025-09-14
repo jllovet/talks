@@ -947,3 +947,17 @@ Add to
 ---
 
 ![Obsidian Inline Mermaid](obsidian-inline-mermaid.png)
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![jllovet.com](qr_jllovet_com.png){width=50%}
+::: 
+
+::: {.column width="50%"}
+![slides](qr_slides.png){width=50%}
+:::
+
+::::
