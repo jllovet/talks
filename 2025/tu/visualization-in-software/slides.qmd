@@ -1161,7 +1161,7 @@ fontname="Tahoma bold";
 
 - Knowledge management system built-around plain-text
 - Uses text processing of markdown files
-- [https://obsidian.md/](https://obsidian.md/)
+- [obsidian.md](https://obsidian.md/)
 
 ---
 
