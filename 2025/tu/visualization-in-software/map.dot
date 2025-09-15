@@ -1,0 +1,72 @@
+digraph g {
+  subgraph cluster_prelude {
+    label="Prelude"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#E5F5FD"
+    intro [label="Intro"]
+    motivation [label="Motivation"]
+    computation [label="Computation"]
+    intro -> motivation -> computation
+  }
+  
+  subgraph cluster_graphviz {
+    label="Graphviz"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#EBF3E7"
+    basics [label="Basics"]
+    nodes [label="Nodes"]
+    edges [label="Edges"]
+    subgraphs [label="Subgraphs"]
+    styling [label="Styling"]
+    basics -> nodes -> edges -> subgraphs -> styling
+  }
+  subgraph cluster_storytelling {
+    label="Storytelling"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#ECE8F6"
+    
+    apricots [label="Apricots"]
+    supply_chain [label="Supply\nChains"]
+    apricots -> supply_chain
+  }
+    subgraph cluster_scaling {
+    label="Scaling"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#FDF7E3"
+    illustration_through_web_dev [label="Web Dev"]
+    ide [label="Integration\nin IDE"]
+    preprocessors [label="Preprocessors"]
+    language [label="Embed in\nLanguages"]
+    illustration_through_web_dev -> ide -> preprocessors -> language
+    
+  }
+  subgraph cluster_integration_with_tools {
+    label="Integration with Tools"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#FDEDED"
+    codebase_inspection [label="Codebases"]
+    graphviz_obsidian [label="Graphviz\nin\nObsidian"]
+    codebase_inspection -> graphviz_obsidian
+  }
+  subgraph cluster_mermaid {
+    label="Mermaid"
+    style=rounded
+    style=filled
+    pencolor="#AEB6BE"
+    bgcolor="#F8F8F8"
+    sequence_diagrams [label="Sequences"]
+    obsidian [label="Obsidian"]
+    erd [label="Entity\nRelationship\nDiagrams"]
+    sequence_diagrams -> obsidian -> erd
+  }
+}
