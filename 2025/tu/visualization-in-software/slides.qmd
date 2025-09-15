@@ -403,18 +403,66 @@ digraph g {
 digraph g {
     rankdir=LR
     node [colorscheme=pastel25]
-    praecoquum [shape="rectangle" style=filled fillcolor="1" label="praecoquum\n------\nLate Latin\nearly-ripening apples"]
-    praecocia [shape="rectangle" style=filled fillcolor="1" label="praecocia\n------\nLate Latin\nearly-ripening peaches"]
-    praekokion [shape="rectangle" style=filled fillcolor="2" label="πραικόκιον\npraekokion\n------\nAncient Greek\napricot"]
-    berikokkia [shape="rectangle" style=filled fillcolor="2" label="βερικοκκία\nberikokkia\n------\nByzantine Greek\napricot tree"]
-    albarqūq [shape="rectangle" style=filled fillcolor="3" label="الْبَرْقُوق\nal-barqūq\n------\nArabic\nplums"]
-    albercoc [shape="rectangle" style=filled fillcolor="4" label="albercoc\n------\nCatalan\napricot"]
-    abrecoc [shape="rectangle" style=filled fillcolor="4" label="abrecoc\n------\ndialectical Catalan\napricot"]
-    apricum [shape="rectangle" style=filled fillcolor="1" label="apricum\n------\nLatin\nsunny place"]
-    abrecock [shape="rectangle" style=filled fillcolor="5" label="abrecock\n------\nEnglish\nobsolete form of apricot"]
-    abricot [shape="rectangle" style=filled fillcolor="4" label="abricot\n------\nFrench\napricot"]
-    apricock [shape="rectangle" style=filled fillcolor="5" label="apricock\n------\nEnglish\narchaic form of apricot"]
-    apricot [shape="rectangle" style=filled fillcolor="5" label="apricot"]
+    praecoquum [
+      shape="rectangle" style=filled
+      fillcolor="1"
+      label="praecoquum\n------\nLate Latin\nearly-ripening apples"
+    ]
+    praecocia [
+      shape="rectangle" style=filled
+      fillcolor="1"
+      label="praecocia\n------\nLate Latin\nearly-ripening peaches"
+    ]
+    praekokion [
+      shape="rectangle" style=filled
+      fillcolor="2"
+      label="πραικόκιον\npraekokion\n------\nAncient Greek\napricot"
+    ]
+    berikokkia [
+      shape="rectangle" style=filled
+      fillcolor="2"
+      label="βερικοκκία\nberikokkia\n------\nByzantine Greek\napricot tree"
+    ]
+    albarqūq [
+      shape="rectangle" style=filled
+      fillcolor="3"
+      label="الْبَرْقُوق\nal-barqūq\n------\nArabic\nplums"
+    ]
+    albercoc [
+      shape="rectangle" style=filled
+      fillcolor="4"
+      label="albercoc\n------\nCatalan\napricot"
+    ]
+    abrecoc [
+      shape="rectangle" style=filled
+      fillcolor="4"
+      label="abrecoc\n------\ndialectical Catalan\napricot"
+    ]
+    apricum [
+      shape="rectangle" style=filled
+      fillcolor="1"
+      label="apricum\n------\nLatin\nsunny place"
+    ]
+    abrecock [
+      shape="rectangle" style=filled
+      fillcolor="5"
+      label="abrecock\n------\nEnglish\nobsolete form of apricot"
+    ]
+    abricot [
+      shape="rectangle" style=filled
+      fillcolor="4"
+      label="abricot\n------\nFrench\napricot"
+    ]
+    apricock [
+      shape="rectangle" style=filled
+      fillcolor="5"
+      label="apricock\n------\nEnglish\narchaic form of apricot"
+    ]
+    apricot [
+      shape="rectangle" style=filled
+      fillcolor="5"
+      label="apricot"
+    ]
 
     praecoquum -> praecocia
     praecocia -> praekokion
