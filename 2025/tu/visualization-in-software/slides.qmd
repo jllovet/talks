@@ -423,6 +423,7 @@ digraph g {
     albarqūq -> albercoc
     albercoc -> abrecoc [label="dialectical\nvariation"]
     abrecoc -> abrecock
+    abrecoc -> abricot
     apricum -> apricock [label="influenced"]
     abrecock -> apricock [label="alteration"]
 
@@ -477,6 +478,7 @@ digraph g {
     albarqūq -> albercoc
     albercoc -> abrecoc [label="dialectical\nvariation"]
     abrecoc -> abrecock
+    abrecoc -> abricot
     apricum -> apricock [label="influenced"]
     abrecock -> apricock [label="alteration"]
 
